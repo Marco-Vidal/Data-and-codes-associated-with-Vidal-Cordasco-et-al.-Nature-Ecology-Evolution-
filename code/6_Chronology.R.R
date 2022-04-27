@@ -7,6 +7,11 @@ library(gridExtra)
 require(Bchron)
 library(gridExtra)
 
+################## The script below was written in  Rstudio, so it is  recommended
+############ to be run within RStudio.
+### Choose your own directory:
+
+setwd("C:/...")
 
 ### FUNCTIONS TO PERFORM OLE MODELS WITH RESAMPLING PROCEDURE
 
@@ -97,9 +102,6 @@ T_origin <- function(x)
   Plot
 }
 
-
-## Directory
-setwd("C:/Users/marco/OneDrive/Escritorio/Results-Corrected/Iberian-Peninsula/SubmisionNatureEcologyEvolution/ResponsetoReviewers")
 
 
 #OPTIMAL LINEAR ESTIMATION
