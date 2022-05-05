@@ -1,4 +1,5 @@
-rm(list = ls()) # Clear all
+# Clear all
+rm(list = ls()) 
 
 ## Load libraries
 
@@ -16,11 +17,11 @@ setwd("C:/...")
 ######################### GENERATE PREDICTIVE FUNCTIONS
 
 ###################################### MAT model
-PercentageSpecies <- read.xlsx("Clim_ValidationDataset.xlsx", rowNames=TRUE, 
+PercentageSpecies <- read.xlsx("Clim_ValidationDatast.xlsx", rowNames=TRUE, 
                        colNames =TRUE, sheet="Dataset")
 
 
-MAT.Dataset <- read.xlsx("Clim_ValidationDataset.xlsx", rowNames=FALSE, 
+MAT.Dataset <- read.xlsx("Clim_ValidationDatast.xlsx", rowNames=FALSE, 
                colNames=TRUE, sheet="T_ann")
 
 pred.temp <-wa(PercentageSpecies, MAT.Dataset$T_ann, deshrink= "monotonic")
@@ -34,7 +35,7 @@ performance(boot)
 ##################################### MAP model
 
 
-MAP.Dataset <- read.xlsx("Clim_ValidationDataset.xlsx", 
+MAP.Dataset <- read.xlsx("Clim_ValidationDatast.xlsx", 
                  rowNames=FALSE, colNames=TRUE, sheet="P_ann")
 
 
@@ -51,7 +52,7 @@ performance(boot)
 
 ##IberianPeninsula
 
-Dataset <- read.xlsx("Clim_ValidationDataset.xlsx", 
+Dataset <- read.xlsx("Clim_ValidationDatast.xlsx", 
                   rowNames=FALSE, colNames=TRUE, sheet="Pred.Pollen.IberianPeninsula")
 
 head(Dataset)
@@ -81,7 +82,7 @@ write.xlsx(temp, "TempEstimations.xlsx")
 
 ## Evaluation of the Delta Correction method
 
-Dataset <- read.xlsx("Clim_ValidationDataset.xlsx", rowNames=FALSE,
+Dataset <- read.xlsx("Clim_ValidationDatast.xlsx", rowNames=FALSE,
                      colNames=TRUE, sheet="DeltaCorrection")
 head(Dataset)
 
@@ -98,7 +99,7 @@ aggregate(D_MAP~Bias, data=Dataset, mean)
 MaT_B <-ggplot(data=Dataset, aes(x=D_MAT,y=SiteLevel, group=Bias)) +
   geom_point(aes(shape=Bias, color=Bias))+
   geom_vline(xintercept = 0, colour= "red")+
-  xlab("Difference between observed and predicted MAT (ºC)") +
+  xlab("Difference between observed and predicted MAT (ÂºC)") +
   ylab("Site and Level")
 
 MaP_B <-ggplot(data=Dataset, aes(x=D_MAP,y=SiteLevel, group=Bias)) +
@@ -112,7 +113,7 @@ grid.arrange(MaT_B, MaP_B, ncol=2)
 
 ### Correlation Observed vs Predicted
 
-Dataset <- read.xlsx("Clim_ValidationDataset.xlsx", rowNames=FALSE,
+Dataset <- read.xlsx("Clim_ValidationDatast.xlsx", rowNames=FALSE,
                      colNames=TRUE, sheet="Outcomes")
 head(Dataset)
 
@@ -120,8 +121,8 @@ MatPlot <- ggplot(data = Dataset, aes(x = MAT_Pollen, y = MAT_Armstrong_BiasCorr
   geom_point() +
   stat_smooth(method = "lm") +
   scale_y_continuous(expand = c(0.01, 0)) +
-  xlab("Observed MAT (ºC)") +
-  ylab("Predicted MAT (ºC)") +
+  xlab("Observed MAT (ÂºC)") +
+  ylab("Predicted MAT (ÂºC)") +
   stat_cor(method = "pearson") +
   RcmdrPlugin.KMggplot2::theme_simple(base_size = 14, base_family = "sans")
 
