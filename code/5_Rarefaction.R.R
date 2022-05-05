@@ -1,5 +1,5 @@
-
-rm(list = ls()) # Clear all
+# Clear all
+rm(list = ls()) 
 
 ## Load libraries
 
