@@ -47,10 +47,8 @@ T_extinction <- function(x)
   Output_TE <-na.omit(Output_TE)
   Output_TE$Cul <- "x"
   
-  head(Output_TE)
   Output_TE$Estimate<- Output_TE$Estimate * -1
   Plot<- ggplot(data=Output_TE, aes(x=Cul, y=Estimate, fill=Cul)) +
-    
     geom_violin() +
     coord_flip()+
     theme_classic(
@@ -94,11 +92,9 @@ T_origin <- function(x)
   Output_O$Cul <- "x"
  
   Plot<- ggplot(data= Output_O, aes(x=Cul, y=Estimate, fill=Cul)) +
-    
     geom_violin() +
     coord_flip()+
-    theme_classic(
-    ) +
+    theme_classic() +
     ggtitle("x") +
     scale_y_reverse(breaks = seq(30000, 55000, 5000)) +
     xlab("") + stat_summary(fun.data=mean_sdl, 
@@ -112,6 +108,7 @@ T_origin <- function(x)
 
 
 ## EUROSIBERIAN REGION, END MOUSTERIAN: Central Range Estimate (CRR)
+
 DF<- read.xlsx("OLE&SPD.xlsx", rowNames= FALSE, colNames= TRUE, sheet="OLE")
 head(DF)
 
@@ -131,8 +128,6 @@ OLE.fun(CRE_Dataset, alpha=0.1) # alpha is 0.1 because the sExtinct::OLE functio
 # Resampling:
 
 T_extinction()
-
-
 
 
 ## EUROSIBERIAN REGION, START CHATERLPERRONIAN
@@ -481,10 +476,7 @@ head(SPD.Eurosiberian)
 #write.xlsx(SPD.Eurosiberian, "SPD.Eurosiberian.xlsx")
 
 
-
 #### PLOT
-
-
 
 EruoSib_SDP <- ggplot(data = SPD.Eurosiberian, aes(x = Age, y = PrDens, color = Culture)) + 
   geom_line()+
