@@ -20,7 +20,6 @@ setwd("C:/...")
 
 EuroSiberian <- read.xlsx("Herbivore.Species.xlsx", rowNames=FALSE,
                            colNames=TRUE, sheet="Eurosiberian")
-
 SubMediterranean <- read.xlsx("Herbivore.Species.xlsx", rowNames=FALSE,
                                 colNames=TRUE, sheet="Submediterranean")
 MesoMediterranean <- read.xlsx("Herbivore.Species.xlsx", rowNames=FALSE,
@@ -34,7 +33,6 @@ EuroSib <- as.matrix(apply(EuroSiberian[,-1],2,as.integer))
 row.names(EuroSib) <- EuroSiberian$Species # row names = species
 
 # Do the same with the other regions
-
 
 SubMed <- as.matrix(apply(SubMediterranean[,-1],2,as.integer))
 row.names(SubMed) <- SubMediterranean$Species 
@@ -60,7 +58,7 @@ Outputs_b <- as.data.frame (out.raw$iNextEs)
 
 ggiNEXT(out.raw, facet.var="site") #PLOT
 
-# save outputs
+# save outputs in xlsx format
 
 write.xlsx(Outputs_a, "Rarefaction_Outputs_Richness.xlsx")
 write.xlsx(Outputs_b, "Rarefaction_Outputs_Extrapolation.xlsx")
