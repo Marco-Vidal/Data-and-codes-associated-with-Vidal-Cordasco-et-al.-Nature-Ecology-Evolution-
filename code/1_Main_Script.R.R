@@ -221,11 +221,11 @@ NPP.Eurosiberian <- read.xlsx("Dataset-NPP.xlsx", rowNames=FALSE,
 
 ### Mean NPP in all stadial/interstadial periods of the late MIS 3:
 
-Stadials <- subset(NPP.Eurosiberian, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-19"
+Stadials <- subset(NPP.Eurosiberian, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-9"
                    | Phase=="GS-8"| Phase=="GS-7"| Phase=="GS-6"| Phase=="GS-5")
 Stadials$Stadial_Interstadial="Stadial"
 
-Interstadials <- subset(NPP.Eurosiberian, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-19"
+Interstadials <- subset(NPP.Eurosiberian, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-9"
                    | Phase=="GI-8"| Phase=="GI-7"| Phase=="GI-6"| Phase=="GI-5")
 Interstadials$Stadial_Interstadial="Interstadial"
 
@@ -428,11 +428,11 @@ NPP.SubMediterranean <- read.xlsx("Dataset-NPP.xlsx", rowNames=FALSE,
 
 ### Mean NPP in all stadial/interstadial periods of the late MIS 3:
 
-Stadials <- subset(NPP.SubMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-19"
+Stadials <- subset(NPP.SubMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-9"
                    | Phase=="GS-8"| Phase=="GS-7"| Phase=="GS-6"| Phase=="GS-5")
 Stadials$Stadial_Interstadial="Stadial"
 
-Interstadials <- subset(NPP.SubMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-19"
+Interstadials <- subset(NPP.SubMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-9"
                         | Phase=="GI-8"| Phase=="GI-7"| Phase=="GI-6"| Phase=="GI-5")
 Interstadials$Stadial_Interstadial="Interstadial"
 
@@ -622,11 +622,11 @@ NPP.MesoMediterranean <- read.xlsx("Dataset-NPP.xlsx", rowNames=FALSE,
 
 ### Mean NPP in all stadial/interstadial periods of the late MIS 3:
 
-Stadials <- subset(NPP.MesoMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-19"
+Stadials <- subset(NPP.MesoMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-9"
                    | Phase=="GS-8"| Phase=="GS-7"| Phase=="GS-6"| Phase=="GS-5")
 Stadials$Stadial_Interstadial="Stadial"
 
-Interstadials <- subset(NPP.MesoMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-19"
+Interstadials <- subset(NPP.MesoMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-9"
                         | Phase=="GI-8"| Phase=="GI-7"| Phase=="GI-6"| Phase=="GI-5")
 Interstadials$Stadial_Interstadial="Interstadial"
 
@@ -821,11 +821,11 @@ NPP.ThermoMediterranean <- read.xlsx("Dataset-NPP.xlsx", rowNames=FALSE,
 
 ### Mean NPP in all stadial/interstadial periods of the late MIS 3:
 
-Stadials <- subset(NPP.ThermoMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-19"
+Stadials <- subset(NPP.ThermoMediterranean, Phase=="GS-13"| Phase=="GS-12"| Phase=="GS-11"| Phase=="GS-10"| Phase=="GS-9"
                    | Phase=="GS-8"| Phase=="GS-7"| Phase=="GS-6"| Phase=="GS-5")
 Stadials$Stadial_Interstadial="Stadial"
 
-Interstadials <- subset(NPP.ThermoMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-19"
+Interstadials <- subset(NPP.ThermoMediterranean, Phase=="GI-13"| Phase=="GI-12"| Phase=="GI-11"| Phase=="GI-10"| Phase=="GI-9"
                         | Phase=="GI-8"| Phase=="GI-7"| Phase=="GI-6"| Phase=="GI-5")
 Interstadials$Stadial_Interstadial="Interstadial"
 
